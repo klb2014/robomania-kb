@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class Crusher1 : MonoBehaviour
 {
-    public float speed;
+    public float speed = 5f;
+
+    private void Start()
+    {
+        GetComponent<Rigidbody2D>().AddForce(Vector2.right * speed, ForceMode2D.Impulse);
+    }
 
     private void FixedUpdate()
     {
