@@ -8,6 +8,8 @@ public class EnemyHealth : MonoBehaviour
     // get references to the Unity Slider we are using for the health bar
     public Slider healthBar;
 
+    public GameController controller;
+
     // create references for resources loaded in Awake
     private SpriteRenderer enemySpriteRenderer;
     private Material materialWhite;
@@ -86,5 +88,7 @@ public class EnemyHealth : MonoBehaviour
 
         // self destruct the enemy!
         Destroy(gameObject);
+
+        controller.DecreaseCrusherCount();
     }
 }
