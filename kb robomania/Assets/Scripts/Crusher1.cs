@@ -13,7 +13,7 @@ public class Crusher1 : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (transform.position.x <= -8 || transform.position.x >= 8)
+        if (transform.position.x <= -7 || transform.position.x >= 7)
         {
             speed *= -1;
         }

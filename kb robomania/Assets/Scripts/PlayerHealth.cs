@@ -33,12 +33,24 @@ public class PlayerHealth : MonoBehaviour
     // then the player takes damage each frame
     private void OnCollisionStay2D(Collision2D other)
     {
+        print("Colliding with object " + other.gameObject.name);
         if (other.collider.tag == "Enemy")
         {
             TakeDamage();
         }
     }
-    
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        print("Colliding with object " + other.gameObject.name);
+        if (other.collider.tag == "Enemy")
+        {
+            TakeDamage();
+        }
+    }
+
+
+
+
     // TakeDamage is called each frame that RoboMan is colliding with an Enemy game object
     private void TakeDamage()
     {
